@@ -102,12 +102,12 @@ $tocBreakpoint: 1024px;
 
   a {
     text-decoration: none;
-    color:$primary;
+    color:#9b9b9b;
     font-size: 0.9rem;
   }
 
   a.active {
-    color:  #9b9b9b;
+    color:  $primary;
   }
 }
 
