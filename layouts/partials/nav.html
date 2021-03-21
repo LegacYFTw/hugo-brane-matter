@@ -1,0 +1,19 @@
+{{ $currentPage := . }}
+{{ $icons := .Site.Params.iconOrder | default (slice "Twitter" "GitHub" "Email" "Mastodon" "Facebook" "GitLab" "Instagram" "LinkedIn" "YouTube") }}
+
+<nav class="nav" id="navigation">
+  <ul class="nav__list">
+    {{ $currentPage := . }} 
+    {{ range .Site.Menus.main }}
+      <li>
+        <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active"
+        {{end}} href="{{ .URL }}">{{ .Name }}<span class="fancy">.</span></a>
+      </li>
+    {{ end }}
+      <li>
+        <br>
+      </li>
+  </ul>
+
+
+</nav>
